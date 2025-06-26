@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap');
+
+:root {
+  --cor-fundo: #1B1F3B;
+  --cor-secundaria: #3D3C6A;
+  --cor-destaque: #A159FF;
+  --cor-texto-claro: #E0E0E0;
+  --cor-texto-escuro: #2A2E4A;
+  --cor-borda: #4B4B7D;
+  --sombra-card: rgba(161, 89, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-claro);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+header {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+h1, h2, h5 {
+  color: var(--cor-destaque);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.lead {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 1rem;
+}
+
+header p {
+  max-width: 600px;
+  margin: 0.5rem auto 1.5rem auto;
+  color: var(--cor-texto-claro);
+}
+
+.badge {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5em 0.9em;
+  margin: 0 0.3em 0.6em 0.3em;
+  border-radius: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.badge:hover {
+  background-color: var(--cor-destaque);
+}
+
+main {
+  margin-bottom: 4rem;
+}
+
+.card {
+  background-color: var(--cor-secundaria);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px var(--sombra-card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px var(--sombra-card);
+}
+
+.card-body {
+  padding: 1.8rem 1.5rem;
+  color: var(--cor-texto-claro);
+  flex-grow: 1;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  color: var(--cor-destaque);
+}
+
+.card-text {
+  font-size: 1rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.btn-outline-primary {
+  border-color: var(--cor-destaque);
+  color: var(--cor-destaque);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.95rem;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  box-shadow: 0 4px 15px var(--cor-destaque);
+  border-color: var(--cor-destaque);
+}
+
+footer {
+  border-top: 1px solid var(--cor-borda);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: var(--cor-texto-claro);
+  text-align: center;
+}
+
+footer h2 {
+  margin-bottom: 1rem;
+  color: var(--cor-destaque);
+}
+
+footer a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--cor-texto-claro);
+  text-decoration: underline;
+}
+
+.bi {
+  vertical-align: middle;
+  margin-right: 0.3em;
+  font-size: 1.2rem;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .card-body {
+    padding: 1.2rem 1rem;
+  }
+
+  .btn-outline-primary {
+    font-size: 0.9rem;
+    padding: 0.35rem 1rem;
+  }
+}
